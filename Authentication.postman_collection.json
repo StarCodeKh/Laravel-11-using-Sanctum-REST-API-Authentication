@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "fbd8264f-99a0-465e-a42a-edda5f35b285",
+		"name": "Authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31945044"
+	},
+	"item": [
+		{
+			"name": "Get data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local_url}}/get-user",
+					"host": [
+						"{{local_url}}"
+					],
+					"path": [
+						"get-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"StarCode Kh\",\n    \"email\":\"starcodekh@gmail.com\",\n    \"password\":\"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}/register",
+					"host": [
+						"{{local_url}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"starcodekh@gmail.com\",\n    \"password\":\"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}/login",
+					"host": [
+						"{{local_url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZDFlMzhmZC00MTM3LTQ4MmUtOGI1My01ODE2ZmE4NDZhNDkiLCJqdGkiOiJjYTNjM2NlNGY1NmI0NDFlODBjYjRiM2NiMTk2ZjE1MjJhOGEzYWI3YmZjNGMwNmMxNzUyN2QwN2M0MjZmYzEwY2M1M2Q4Y2UwOGEyZTZjYyIsImlhdCI6MTcyNzUzMTMxNS44OTAzOSwibmJmIjoxNzI3NTMxMzE1Ljg5MDM5LCJleHAiOjE3NTkwNjczMTUuODg0NDM0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.FUWtdxeTW1n1Tbw1OwvQGZrVWATZSYK4f3a1D5dKf_9ZEBaj7aQb32p3Y5tZy2NLQVY83M4qCT_Ad0UmGSDHFaw4apEZt1qCVDr2PR6rNHNpTbs22OQObpRlVY-i76efelFZTkVvKF2A_1xYZVEYYCOgBhtaZu01feNqnNvCV-VuRprM46dczPgmGS_8cAYpd1ti5RC9R4ug_Q0dva7kurJTbQr4tuSyRZmTYOC_FhEj08tRYKuPIK2DvSB5aXje27aZqQfZCATpObY0VkiZC96yjT4NBAyGLTK-qxWu4MzDSEaFtqr94hEL5hFTrM5qmhELqo4_qRRzDUy2LOsPWgIfehmRV2csVnvv8pU2fP10ewwYybixQxTNPAP0vemjdMMVLWtJkChJpL--BplWTPwmSRQlRpr5CG-w3clrGtKZphBwj8qk79g513GCRkfRa4We2uKc02xjZEsg6fi5GQsjys-V6iFqW8NHVEVt-9KSQi9Avr1Bwd3nKAZMotXO5clJphwNWE8hHEWXRHpf870dQifs4E9noJqEYiExIJUlKMC8DomSxPNq1b0UVl6kvN8haVeoBP5BNQs6OxugLt5N-RKdZRdCjDCwtsoGUVGk45I9cBGeXBUemSSA9B5lXO-BREbwCIbl3gre28cTB5JC7-0GxnQBQ_Ygzk0YzQ4",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local_url",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
